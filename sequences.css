@@ -1,3 +1,8 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
@@ -6,6 +11,7 @@ body {
     width: 100%;
     height: 100%;
     margin-top: 10px;
+    overflow:hidden;
 }
 
 .comment_body {
@@ -14,9 +20,9 @@ body {
     font-weight: 400;
     background-color: #e5e6e8;
     min-height:12px;
-    max-height: 150px;
+    /*max-height: 150px;*/
     overflow-y: auto;
-    width:260px;
+    width:300px;
     margin-top: 30px;
     float: left;
     position:relative;
@@ -38,9 +44,9 @@ body {
 }
 
 
-/*.comment_body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
-}*/
+}
 
 #title {
     float:top;
@@ -58,14 +64,31 @@ body {
 #sidebar {
     position:relative;
     float:left;
-    width:300px;
+    width:340px;
+    min-height:150px;
+    max-height: 90%;
     margin-right:20px;
     margin-left:20px;
+    overflow:auto;
+}
+
+
+#sidebar::-webkit-scrollbar {
+    width:  .5em;
+    height: .5em;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: slategray;
+}
+
+#sidebar::-webkit-scrollbar-track {
+    background: lightgrey;
 }
 
 #sequence {
-    width: 600px;
-    height: 70px;
+    width: 100%;
+    height: 100%;
 }
 
 #legend {

@@ -182,8 +182,8 @@ function mouseleave(d) {
     if (!clickMode) {
         // $(".comment_body").remove();
         // Hide the breadcrumb trail
-        d3.select("#trail")
-            .style("visibility", "hidden");
+        /*d3.select("#trail")
+            .style("visibility", "hidden");*/
 
         // Deactivate all segments during transition.
         d3.selectAll(".sunburst_node").on("mouseover", null);
@@ -226,25 +226,25 @@ function getAncestorsSize(node) {
 
 function initializeBreadcrumbTrail() {
     // Add the svg area.
-    var trail = d3.select("#sequence").append("svg:svg")
+   /* var trail = d3.select("#sequence").append("svg:svg")
         .attr("width", 1500)
         .attr("height", 1500)
         .attr("id", "trail");
     // Add the label at the end, for the percentage.
     trail.append("svg:text")
         .attr("id", "endlabel")
-        .style("fill", "#000");
+        .style("fill", "#000");*/
 }
 function initializeConversation() {
     // Add the svg area.
-    var trail = d3.select("#conversation").append("svg:svg")
+    /*var trail = d3.select("#conversation").append("svg:svg")
         .attr("width", width)
         .attr("height", 50)
         .attr("id", "trail");
     // Add the label at the end, for the percentage.
     trail.append("svg:text")
         .attr("id", "endlabel")
-        .style("fill", "#000");
+        .style("fill", "#000");*/
 }
 
 // Generate a string that describes the points of a breadcrumb polygon.
@@ -265,15 +265,15 @@ function breadcrumbPoints(d, i) {
 function updateBreadcrumbs(nodeArray) {
 
     // Data join; key function combines name and depth (= position in sequence).
-    var g = d3.select("#trail")
+    /*var g = d3.select("#trail")
         .selectAll("g")
         .data(nodeArray, function (d) {
             return d;
-        });
+        });*/
 
 
     // Add breadcrumb and label for entering nodes.
-    var entering = g.select("#trail").append("svg:g");
+   /* var entering = g.select("#trail").append("svg:g");*/
 
     /*  entering.append("svg:polygon")
      .attr("points", breadcrumbPoints)
@@ -283,14 +283,14 @@ function updateBreadcrumbs(nodeArray) {
     })
 
 
-        var text = entering.append("text")
-        /*       .attr("x", (b.w + b.t) / 4)
-         .attr("y", b.h / 2)*/
+        /*var text = entering.append("text")
+        /!*       .attr("x", (b.w + b.t) / 4)
+         .attr("y", b.h / 2)*!/
             .attr("dy", "0.35em")
             .attr("text-anchor", "left")
             .text(function (d) {
                 return d.body;
-            })
+            })*/
 
 
         // Set position for entering and updating nodes.
@@ -320,15 +320,15 @@ function updateBreadcrumbs(nodeArray) {
          .text(percentageString);*/
 
         // Make the breadcrumb trail visible, if it's hidden.
-        d3.select("#trail")
-            .style("visibility", "");
+        /*d3.select("#trail")
+            .style("visibility", "");*/
 
     }
 
 function updateConversation(nodeArray) {
-    var g = d3.select("#trail")
+    /*var g = d3.select("#trail")
         .selectAll("g")
-        .data(nodeArray, function(d) { return d.author + d.depth; });
+        .data(nodeArray, function(d) { return d.author + d.depth; });*/
 }
 function find_all_children(data,current_node) {
     var children = []
