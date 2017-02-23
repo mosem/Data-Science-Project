@@ -118,7 +118,7 @@ function createVisualization(json) {
         .attr("d", arc)
         .attr("fill-rule", "evenodd")
         .style("fill", function(d) { return (d.sentiment > 0) ? colors["pos"] : colors["neg"]; })
-        .style("opacity", function(d) { return Math.abs(d.sentiment); })
+        .style("opacity", 1)
         .on("mouseover", mouseover)
         .on("click", click);
 
@@ -130,7 +130,8 @@ function createVisualization(json) {
         .attr('d',pieArc)
         .attr('fill', function(d,i) {
             return colors[d.data.label];
-        });
+        })
+        .style("opacity", 1);
 
     // Add the mouseleave handler to the bounding circle.
     d3.select("#container").on("mouseleave", mouseleave);
@@ -143,16 +144,20 @@ function click(d) {
     var sequenceArray = getAncestors(d);
     if (!clickMode) {
         clickMode = true;
+        // Fade all the segments.
+        d3.selectAll(".sunburst_node")
+            .style("opacity", 0.2);
+        // Then highlight only those that are an ancestor of the current segment.
         vis.selectAll(".sunburst_node")
             .filter(function(node) {
                 return (sequenceArray.indexOf(node) >= 0);
             })
-            .style("stroke", "black");
+            .style("opacity", 1);
     }
     else {
         clickMode = false;
         vis.selectAll(".sunburst_node")
-            .style("stroke", "white");
+            .style("opacity", 1);
     }
 }
 
@@ -192,7 +197,7 @@ function mouseleave(d) {
         d3.selectAll(".sunburst_node")
             .transition()
             .duration(1000)
-            .style("opacity", function(d) { return Math.abs(d.sentiment); })
+            .style("opacity", 1)
             .each("end", function() {
                 d3.select(this).on("mouseover", mouseover);
             });
@@ -279,7 +284,7 @@ function updateBreadcrumbs(nodeArray) {
      .attr("points", breadcrumbPoints)
      .style("fill", function(d) { return colors[d.author]; });*/
     $.each(nodeArray, function(index,item) {
-        $("#sidebar").append("<div class='comment_body'>" + item.body + '</div>');
+        $("#sidebar").append("<div class='comment_body'>" + item.body + '</div>').linkify();
     })
 
 
@@ -294,7 +299,7 @@ function updateBreadcrumbs(nodeArray) {
 
 
         // Set position for entering and updating nodes.
-        g.attr("transform", function (d, i) {
+      /*  g.attr("transform", function (d, i) {
 
             if (g.select("text").node() == null) {
                 return "translate( 0," + i * (b.h ) + ")";
@@ -309,7 +314,7 @@ function updateBreadcrumbs(nodeArray) {
 
         // Remove exiting nodes.b
         g.exit().remove();
-
+*/
 
         /*    // Now move and update the percentage at the end.
          d3.select("#trail").select("#endlabel")

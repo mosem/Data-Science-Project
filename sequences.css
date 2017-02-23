@@ -9,7 +9,7 @@ body {
     font-weight: 400;
     background-color: #fff;
     width: 100%;
-    height: 100%;
+    height: 90%;
     margin-top: 10px;
     overflow:hidden;
 }
@@ -69,6 +69,7 @@ body::-webkit-scrollbar {
     max-height: 90%;
     margin-right:20px;
     margin-left:20px;
+    margin-bottom:40px;
     overflow:auto;
 }
 
