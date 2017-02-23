@@ -15,8 +15,8 @@ var c = {
 
 // Mapping of step names to colors.
 var colors = {
-    "pos": "#5687d1",
-    "neg": "#ff0808",
+    "pos": "#77d1ef",
+    "neg": "#ff8787",
 };
 
 // wrap text to specific width
@@ -49,8 +49,11 @@ var totalSize = 0;
 var totalPos = 0;
 var totalNeg = 0;
 var totalNodes = 0;
+var clickMode = false;
 
 var vis = d3.select("#chart").append("svg")
+    .style("margin", "auto")
+    .style("position", "relative")
     .attr("width", width)
     .attr("height", height)
     .append("svg:g")
@@ -87,15 +90,6 @@ d3.text("5rrasx_out.json", function(text) {
     createVisualization(json);
 });
 
-/*// Use d3.text and d3.csv.parseRows so that we do not need to have a header
-// row, and can receive the csv as an array of arrays.
-d3.text("visit-sequences.csv", function(text) {
-    var csv = d3.csv.parseRows(text);
-    var data = JSON.parse()
-    var json = buildHierarchy(csv);
-    createVisualization(json);
-});*/
-
 // Main function to draw and set up the visualization, once we have the data.
 function createVisualization(json) {
 
@@ -112,6 +106,10 @@ function createVisualization(json) {
     var nodes = partition.nodes(json);
     var dataSummary = [{label: 'pos', count: totalPos}, {label: 'neg', count: totalNeg}];
 
+    //set title
+    $("#title").text(json.title.replace(/\[.*\]/g,""));
+
+    //set chart
     var path = vis.data([json]).selectAll("path")
         .data(nodes)
         .enter().append("path")
@@ -121,7 +119,8 @@ function createVisualization(json) {
         .attr("fill-rule", "evenodd")
         .style("fill", function(d) { return (d.sentiment > 0) ? colors["pos"] : colors["neg"]; })
         .style("opacity", function(d) { return Math.abs(d.sentiment); })
-        .on("mouseover", mouseover);
+        .on("mouseover", mouseover)
+        .on("click", click);
 
 
     var piePath = vis.append('g').selectAll('path')
@@ -140,51 +139,68 @@ function createVisualization(json) {
     totalSize = path.node().__data__.value;
 };
 
+function click(d) {
+    var sequenceArray = getAncestors(d);
+    if (!clickMode) {
+        clickMode = true;
+        vis.selectAll(".sunburst_node")
+            .filter(function(node) {
+                return (sequenceArray.indexOf(node) >= 0);
+            })
+            .style("stroke", "black");
+    }
+    else {
+        clickMode = false;
+        vis.selectAll(".sunburst_node")
+            .style("stroke", "white");
+    }
+}
+
 // Fade all but the current sequence, and show it in the breadcrumb trail.
 function mouseover(d) {
-    $(".comment_body").remove();
-    var percentage = (100 * d.value / totalSize).toPrecision(3);
-    var percentageString = percentage + "%";
-    if (percentage < 0.1) {
-        percentageString = "< 0.1%";
+    if (!clickMode) {
+        $(".comment_body").remove();
+
+        var sequenceArray = getAncestors(d);
+        updateBreadcrumbs(sequenceArray);
+        updateConversation(sequenceArray);
+        // Fade all the segments.
+        d3.selectAll(".sunburst_node")
+            .style("opacity", 0.6);
+        // Then highlight only those that are an ancestor of the current segment.
+        vis.selectAll(".sunburst_node")
+            .filter(function(node) {
+                return (sequenceArray.indexOf(node) >= 0);
+            })
+            .style("opacity", 1);
     }
 
-    var sequenceArray = getAncestors(d);
-    updateBreadcrumbs(sequenceArray, percentageString);
-    updateConversation(sequenceArray, percentageString);
-    // Fade all the segments.
-    d3.selectAll(".sunburst_node")
-        .style("opacity", 0.3);
-
-    // Then highlight only those that are an ancestor of the current segment.
-    vis.selectAll(".sunburst_node")
-        .filter(function(node) {
-            return (sequenceArray.indexOf(node) >= 0);
-        })
-        .style("opacity", 1);
 }
 
 // Restore everything to full opacity when moving off the visualization.
 function mouseleave(d) {
+    if (!clickMode) {
+        // $(".comment_body").remove();
+        // Hide the breadcrumb trail
+        d3.select("#trail")
+            .style("visibility", "hidden");
 
-    // Hide the breadcrumb trail
-    d3.select("#trail")
-        .style("visibility", "hidden");
+        // Deactivate all segments during transition.
+        d3.selectAll(".sunburst_node").on("mouseover", null);
 
-    // Deactivate all segments during transition.
-    d3.selectAll(".sunburst_node").on("mouseover", null);
+        // Transition each segment to full opacity and then reactivate it.
+        d3.selectAll(".sunburst_node")
+            .transition()
+            .duration(1000)
+            .style("opacity", function(d) { return Math.abs(d.sentiment); })
+            .each("end", function() {
+                d3.select(this).on("mouseover", mouseover);
+            });
 
-    // Transition each segment to full opacity and then reactivate it.
-    d3.selectAll(".sunburst_node")
-        .transition()
-        .duration(1000)
-        .style("opacity", function(d) { return Math.abs(d.sentiment); })
-        .each("end", function() {
-            d3.select(this).on("mouseover", mouseover);
-        });
+        d3.select("#explanation")
+            .style("visibility", "hidden");
+    }
 
-    d3.select("#explanation")
-        .style("visibility", "hidden");
 }
 
 // Given a node in a partition layout, return an array of all of its ancestor
@@ -246,9 +262,7 @@ function breadcrumbPoints(d, i) {
 }
 
 // Update the breadcrumb trail to show the current sequence and percentage.
-function updateBreadcrumbs(nodeArray, percentageString) {
-
-
+function updateBreadcrumbs(nodeArray) {
 
     // Data join; key function combines name and depth (= position in sequence).
     var g = d3.select("#trail")
@@ -311,7 +325,7 @@ function updateBreadcrumbs(nodeArray, percentageString) {
 
     }
 
-function updateConversation(nodeArray, percentageString) {
+function updateConversation(nodeArray) {
     var g = d3.select("#trail")
         .selectAll("g")
         .data(nodeArray, function(d) { return d.author + d.depth; });
@@ -356,44 +370,6 @@ function find_all_children(data,current_node) {
     return children
 }
 
-/*function find_all_children(data,current_node) {
-    var children = []
-    for (var i = 0; i < data.length; i++) {
-        if (data[i].parent_id.split('_')[1] == current_node.name){
-            var child = data[i]
-            child.sentiment_score >= 0 ? totalPos++ : totalNeg ++;
-            totalNodes++;
-            var child_node =
-                {
-                    "displayText": child.author,
-                    "name": child.id,
-                    "children": [],
-                    "n_leaves": 0,
-                    "body": child.body,
-                    "author": child.author,
-                    "parent_id": child.parent_id,
-                    "score": child.score,
-                    "sentiment": child.sentiment_score
-                }
-            child_node["children"] = find_all_children(data,child_node)
-            for(var j=0; j <child_node["children"].length; j++) {
-                var temp_child = child_node["children"][0];
-                if (temp_child["children"].length == 0) {
-                    child_node["n_leaves"] += 1;
-                }
-                else {
-                    child_node["n_leaves"] += temp_child["n_leaves"]
-                }
-            }
-            children.push(child_node)
-
-        }
-
-    }
-    return children
-
-}*/
-///
 function buildHierarchy(data,root_name) {
     var root = {
         "name": root_name,
@@ -409,55 +385,3 @@ function buildHierarchy(data,root_name) {
     root.children = find_all_children(data,root)
     return root;
 }
-
-
-
-
-
-/*
-// Take a 2-column CSV and transform it into a hierarchical structure suitable
-// for a partition layout. The first column is a sequence of step names, from
-// root to leaf, separated by hyphens. The second column is a count of how
-// often that sequence occurred.
-function buildHierarchy(csv) {
-    var root = {"name": "root", "children": []};
-    for (var i = 0; i < csv.length; i++) {
-        var sequence = csv[i][0];
-        var size = +csv[i][1];
-        if (isNaN(size)) { // e.g. if this is a header row
-            continue;
-        }
-        var parts = sequence.split("-");
-        var currentNode = root;
-        for (var j = 0; j < parts.length; j++) {
-            var children = currentNode["children"];
-            var nodeName = parts[j];
-            var childNode;
-            if (j + 1 < parts.length) {
-                // Not yet at the end of the sequence; move down the tree.
-                var foundChild = false;
-                for (var k = 0; k < children.length; k++) {
-                    if (children[k]["name"] == nodeName) {
-                        childNode = children[k];
-                        foundChild = true;
-                        break;
-                    }
-                }
-                // If we don't already have a child node for this branch, create it.
-                if (!foundChild) {
-                    childNode = {"name": nodeName, "children": []};
-                    children.push(childNode);
-                }
-                currentNode = childNode;
-            } else {
-                // Reached the end of the sequence; create a leaf node.
-                childNode = {"name": nodeName, "size": size};
-                children.push(childNode);
-            }
-        }
-    }
-    return root;
-};/!**
- * Created by mmanevit on 2/6/2017.
- *!/
-*/
