@@ -48,7 +48,7 @@ var pie = d3.layout.pie()
 var partition = d3.layout.partition()
     .sort(function (a, b) { return d3.ascending(a.time, b.time); })
     .size([2 * Math.PI, radius * radius])
-    .value(function(d) { return d.n_leaves+1; });
+    .value(function(d) { return 1; });
 
 var arc = d3.svg.arc()
     .startAngle(function(d) { return d.x; })
@@ -76,6 +76,8 @@ function createVisualization(json) {
 
     // For efficiency, filter nodes to keep only those large enough to see.
     var nodes = partition.nodes(json);
+
+
     var dataSummary = [{label: 'pos', count: totalPos}, {label: 'neg', count: totalNeg}];
 
     //set title
@@ -207,12 +209,12 @@ function getAncestorsSize(node) {
 function updateBreadcrumbs(nodeArray) {
 
     $.each(nodeArray, function(index,item) {
+        var item_color = (item.sentiment > 0) ? colors["pos"] : colors["neg"];
         $("#sidebar").append("<div class='comment_body'>" +
-            "                   <p class='comment_author'>" + item.author +
+                                "<p class='comment_author'> <div class='sentiment_square' style=background:" + item_color + "></div>" + item.author +
                                 "<span class='comment_score'>" + item.score + " upvotes</span></p>" +
                                 item.body + "</div>").linkify();
     })
-
 /*     // TODO: fix! buggy!
     $('#sidebar').animate({
             scrollTop: $(".comment_body:last").position().top},
@@ -224,7 +226,7 @@ function find_all_children(data,current_node) {
     for (var i = 0; i < data.length; i++) {
         if (data[i].parent_id.split('_')[1] == current_node.name) {
             var child = data[i]
-            child.sentiment_score >= 0 ? totalPos++ : totalNeg++;
+            child.sentiment_score >= 0 ? totalPos+=child.score : totalNeg+=child.score;
             totalNodes++;
             var child_node =
                 {

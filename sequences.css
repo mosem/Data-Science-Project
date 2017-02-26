@@ -49,6 +49,14 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.sentiment_square {
+    float:left;
+    width:12px;
+    height:12px;
+    margin-right: 4px;
+    margin-left: 4px;
+    display:inline;
+}
 .comment_author {
     font-weight: bold;
     line-height: 100%;
