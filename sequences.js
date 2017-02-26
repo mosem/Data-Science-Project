@@ -19,31 +19,6 @@ var colors = {
     "neg": "#ff8787",
 };
 
-// wrap text to specific width
-function wrap(text, width) {
-    text.each(function () {
-        var text = d3.select(this),
-            words = text.text().split(/\s+/).reverse(),
-            word,
-            line = [],
-            lineNumber = 0,
-            lineHeight = 1.1, // ems
-            y = text.attr("y"),
-            dy = parseFloat(text.attr("dy")),
-            tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
-        while (word = words.pop()) {
-            line.push(word);
-            tspan.text(line.join(" "));
-            if (tspan.node().getComputedTextLength() > width) {
-                line.pop();
-                tspan.text(line.join(" "));
-                line = [word];
-                tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
-            }
-        }
-    });
-}
-
 // Total size of all segments; we set this later, after loading the data.
 var totalSize = 0;
 var totalPos = 0;
@@ -92,9 +67,6 @@ d3.text("5rrasx_out.json", function(text) {
 
 // Main function to draw and set up the visualization, once we have the data.
 function createVisualization(json) {
-
-    // Basic setup of page elements.
-    initializeBreadcrumbTrail();
 
     // Bounding circle underneath the sunburst, to make it easier to detect
     // when the mouse leaves the parent g.
@@ -168,7 +140,6 @@ function mouseover(d) {
 
         var sequenceArray = getAncestors(d);
         updateBreadcrumbs(sequenceArray);
-        updateConversation(sequenceArray);
         // Fade all the segments.
         d3.selectAll(".sunburst_node")
             .style("opacity", 0.6);
@@ -178,6 +149,8 @@ function mouseover(d) {
                 return (sequenceArray.indexOf(node) >= 0);
             })
             .style("opacity", 1);
+
+
     }
 
 }
@@ -229,112 +202,23 @@ function getAncestorsSize(node) {
     return tot_size;
 }
 
-function initializeBreadcrumbTrail() {
-    // Add the svg area.
-   /* var trail = d3.select("#sequence").append("svg:svg")
-        .attr("width", 1500)
-        .attr("height", 1500)
-        .attr("id", "trail");
-    // Add the label at the end, for the percentage.
-    trail.append("svg:text")
-        .attr("id", "endlabel")
-        .style("fill", "#000");*/
-}
-function initializeConversation() {
-    // Add the svg area.
-    /*var trail = d3.select("#conversation").append("svg:svg")
-        .attr("width", width)
-        .attr("height", 50)
-        .attr("id", "trail");
-    // Add the label at the end, for the percentage.
-    trail.append("svg:text")
-        .attr("id", "endlabel")
-        .style("fill", "#000");*/
-}
-
-// Generate a string that describes the points of a breadcrumb polygon.
-function breadcrumbPoints(d, i) {
-    var points = [];
-    points.push(0,0);
-    points.push(b.w + ",0");
-    points.push(b.w + b.t + "," + (b.h / 2));
-    points.push(b.w + "," + b.h);
-    points.push("0," + b.h);
-    if (i > 0) { // Leftmost breadcrumb; don't include 6th vertex.
-        points.push(b.t + "," + (b.h / 2));
-    }
-    return points.join(" ");
-}
 
 // Update the breadcrumb trail to show the current sequence and percentage.
 function updateBreadcrumbs(nodeArray) {
 
-    // Data join; key function combines name and depth (= position in sequence).
-    /*var g = d3.select("#trail")
-        .selectAll("g")
-        .data(nodeArray, function (d) {
-            return d;
-        });*/
-
-
-    // Add breadcrumb and label for entering nodes.
-   /* var entering = g.select("#trail").append("svg:g");*/
-
-    /*  entering.append("svg:polygon")
-     .attr("points", breadcrumbPoints)
-     .style("fill", function(d) { return colors[d.author]; });*/
     $.each(nodeArray, function(index,item) {
-        $("#sidebar").append("<div class='comment_body'>" + item.body + '</div>').linkify();
+        $("#sidebar").append("<div class='comment_body'>" +
+            "                   <p class='comment_author'>" + item.author +
+                                "<span class='comment_score'>" + item.score + " upvotes</span></p>" +
+                                item.body + "</div>").linkify();
     })
 
-
-        /*var text = entering.append("text")
-        /!*       .attr("x", (b.w + b.t) / 4)
-         .attr("y", b.h / 2)*!/
-            .attr("dy", "0.35em")
-            .attr("text-anchor", "left")
-            .text(function (d) {
-                return d.body;
-            })*/
-
-
-        // Set position for entering and updating nodes.
-      /*  g.attr("transform", function (d, i) {
-
-            if (g.select("text").node() == null) {
-                return "translate( 0," + i * (b.h ) + ")";
-            }
-            else {
-
-                bbox = g.select("text").node().getBBox()
-                return "translate( 0," + i * (bbox.height + b.h + b.s) + ")";
-            }
-
-        });
-
-        // Remove exiting nodes.b
-        g.exit().remove();
-*/
-
-        /*    // Now move and update the percentage at the end.
-         d3.select("#trail").select("#endlabel")
-         .attr("x", (nodeArray.length + 0.5) * (b.w + b.s))
-         .attr("y", b.h / 2)
-         .attr("dy", "0.35em")
-         .attr("text-anchor", "middle")
-         .text(percentageString);*/
-
-        // Make the breadcrumb trail visible, if it's hidden.
-        /*d3.select("#trail")
-            .style("visibility", "");*/
-
-    }
-
-function updateConversation(nodeArray) {
-    /*var g = d3.select("#trail")
-        .selectAll("g")
-        .data(nodeArray, function(d) { return d.author + d.depth; });*/
+/*     // TODO: fix! buggy!
+    $('#sidebar').animate({
+            scrollTop: $(".comment_body:last").position().top},
+        'slow');*/
 }
+
 function find_all_children(data,current_node) {
     var children = []
     for (var i = 0; i < data.length; i++) {
