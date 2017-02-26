@@ -23,12 +23,13 @@ body {
     /*max-height: 150px;*/
     overflow-y: auto;
     width:300px;
-    margin-top: 30px;
+    margin-top: 3px;
+    margin-bottom: 3px;
     float: left;
     position:relative;
     padding: 5px;
-
 }
+
 
 .comment_body::-webkit-scrollbar {
     width:  .5em;
@@ -46,6 +47,15 @@ body {
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+.comment_author {
+    font-weight: bold;
+    line-height: 100%;
+}
+
+.comment_score {
+    float: right;
 }
 
 #title {
@@ -69,6 +79,7 @@ body::-webkit-scrollbar {
     max-height: 90%;
     margin-right:20px;
     margin-left:20px;
+    margin-bottom:40px;
     overflow:auto;
 }
 
