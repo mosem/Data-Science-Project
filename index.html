@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Sequences sunburst</title>
     <script src="//d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="d3.slider.css" media="screen" />
+    <script src="d3.slider.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="linkify.min.js"></script>
     <script src="linkify-jquery.min.js"></script>
@@ -13,6 +15,7 @@
 </head>
 <body>
 <h1 id="title"></h1>
+
 <div id="main">
     <div id="chart">
         <div id="explanation" style="visibility: hidden;">
@@ -20,6 +23,8 @@
             of visits begin with this sequence of pages
         </div>
     </div>
+    <div id="slider"></div>
+
 </div>
 <div id="sidebar">
     <div id="sequence"></div>
@@ -31,6 +36,7 @@
     d3.select(self.frameElement).style("height", "700px");
 </script>
 </body>
+
 </html>
 
 
