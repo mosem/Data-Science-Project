@@ -131,20 +131,23 @@ function createVisualization(json) {
     // });
 
     d3.select('#slider').call(slider);
-    slider.on("slide", function(e,v){updateOpacity(v)})
+    slider.on("slide", function(e,v){updateOpacity(path,v)})
 
 }
 
-function updateOpacity(val)
+function updateOpacity(path,val)
 {
     var nodes = $(".sunburst_node");
-    for (var i = 0; i < nodes.length; i++)
-    {
-        var node = nodes[i];
+    d3.selectAll(".sunburst_node").each( function(d, i){
+        if(d.score <val){
+            d3.select(this).style("opacity",0)
+        }
+        else {
+            d3.select(this).style("opacity",1)
 
-    }
-    // var path = vis.data([json]).selectAll("path").data(nodes).enter();
-    // console.log(path.length);
+        }
+    })
+
 }
 
 function click(d) {
