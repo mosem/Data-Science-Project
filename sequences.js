@@ -121,22 +121,17 @@ function createVisualization(json) {
     // Get total size of the tree = value of root node from partition.
     totalSize = path.node().__data__.value;
 
-    // Initialize slider
-    var slider = d3.slider().min(0).max(200).ticks(2).showRange(true).value(0);
 
-    // Render the slider in the div
+
+    // Initialize slider
+     var slider = d3.slider();
+
+    //  .on("slide", function(evt, value) {
+    //      console.log("hello");
+    // });
 
     d3.select('#slider').call(slider);
-
-    function dragOne() {
-        console.log("Drag 1");
-    }
-    function dragTwo() {
-        console.log("Drag 2");
-    }
-    d3.select('#dragger').on("click", dragOne);//drag("start drag", dragOne);
-
-    //slider.ondrag.(dragOne); //.on("start drag", dragTwo);
+    slider.on("slide", function(){console.log("we are friends now")})
 
 }
 
