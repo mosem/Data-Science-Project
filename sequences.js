@@ -122,22 +122,18 @@ function createVisualization(json) {
     totalSize = path.node().__data__.value;
 
 
-
+    var min_score =d3.min(nodes, function(d) { return d.score; });
+    var max_score =d3.max(nodes, function(d) { return d.score; });
     // Initialize slider
-     var slider = d3.slider().axis(d3.svg.axis().orient("top").ticks(1));
-
-    //  .on("slide", function(evt, value) {
-    //      console.log("hello");
-    // });
+     var slider = d3.slider().axis(d3.svg.axis().orient("top").ticks(10)).min(min_score).max(max_score).value(min_score);
 
     d3.select('#slider').call(slider);
-    slider.on("slide", function(e,v){updateOpacity(path,v)})
+    slider.on("slide", function(e,v){updateOpacity(v)})
 
 }
 
-function updateOpacity(path,val)
+function updateOpacity(val)
 {
-    var nodes = $(".sunburst_node");
     d3.selectAll(".sunburst_node").each( function(d, i){
         if(d.score <val){
             d3.select(this).style("opacity",0)
