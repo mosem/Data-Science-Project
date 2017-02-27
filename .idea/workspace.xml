@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="888d2c9d-448c-4fc1-a758-e404e7633141" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/d3.slider.css" afterPath="$PROJECT_DIR$/d3.slider.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/d3.slider.js" afterPath="$PROJECT_DIR$/d3.slider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sequences.js" afterPath="$PROJECT_DIR$/sequences.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -49,10 +46,10 @@
       <file leaf-file-name="sequences.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sequences.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="108" column="16" lean-forward="true" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+            <state relative-caret-position="319">
+              <caret line="130" column="10" lean-forward="true" selection-start-line="130" selection-start-column="10" selection-end-line="130" selection-end-column="10" />
               <folding>
-                <marker date="1488202288408" expanded="true" signature="6572:6583" ph="..." />
+                <marker date="1488203283707" expanded="true" signature="6863:6874" ph="..." />
               </folding>
             </state>
           </provider>
@@ -133,7 +130,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>translate</find>
       <find>container</find>
       <find>explanation</find>
       <find>entering</find>
@@ -163,6 +159,7 @@
       <find>dragger</find>
       <find>event</find>
       <find>e</find>
+      <find>ticks</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -413,7 +410,7 @@
       <workItem from="1487675048752" duration="20391000" />
       <workItem from="1487800404683" duration="11622000" />
       <workItem from="1487844769372" duration="1617000" />
-      <workItem from="1488122292795" duration="25377000" />
+      <workItem from="1488122292795" duration="26372000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;changed to weighted sum&quot;">
       <created>1488133086045</created>
@@ -429,11 +426,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488200314242</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;slider attempt 2&quot;">
+      <created>1488202341936</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1488202341936</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199193000" />
+    <option name="totallyTimeSpent" value="200188000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1406" extended-state="6" />
@@ -486,7 +490,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;changed to weighted sum&quot;" />
     <MESSAGE value="&quot;attempt to add slider #1&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;attempt to add slider #1&quot;" />
+    <MESSAGE value="&quot;slider attempt 2&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;slider attempt 2&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -526,7 +531,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488202288408" expanded="true" signature="6572:6583" ph="..." />
+            <marker date="1488203283707" expanded="true" signature="6863:6874" ph="..." />
           </folding>
         </state>
       </provider>
@@ -570,7 +575,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488202288408" expanded="true" signature="6572:6583" ph="..." />
+            <marker date="1488203283707" expanded="true" signature="6863:6874" ph="..." />
           </folding>
         </state>
       </provider>
@@ -614,7 +619,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488202288408" expanded="true" signature="6572:6583" ph="..." />
+            <marker date="1488203283707" expanded="true" signature="6863:6874" ph="..." />
           </folding>
         </state>
       </provider>
@@ -672,7 +677,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488202288408" expanded="true" signature="6572:6583" ph="..." />
+            <marker date="1488203283707" expanded="true" signature="6863:6874" ph="..." />
           </folding>
         </state>
       </provider>
@@ -742,7 +747,7 @@
         <state relative-caret-position="925">
           <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
           <folding>
-            <marker date="1488202288408" expanded="true" signature="6572:6583" ph="..." />
+            <marker date="1488203283707" expanded="true" signature="6863:6874" ph="..." />
           </folding>
         </state>
       </provider>
@@ -871,10 +876,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sequences.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="108" column="16" lean-forward="true" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+        <state relative-caret-position="319">
+          <caret line="130" column="10" lean-forward="true" selection-start-line="130" selection-start-column="10" selection-end-line="130" selection-end-column="10" />
           <folding>
-            <marker date="1488202288408" expanded="true" signature="6572:6583" ph="..." />
+            <marker date="1488203283707" expanded="true" signature="6863:6874" ph="..." />
           </folding>
         </state>
       </provider>

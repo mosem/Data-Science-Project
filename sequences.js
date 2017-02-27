@@ -124,15 +124,27 @@ function createVisualization(json) {
 
 
     // Initialize slider
-     var slider = d3.slider();
+     var slider = d3.slider().axis(d3.svg.axis().orient("top").ticks(1));
 
     //  .on("slide", function(evt, value) {
     //      console.log("hello");
     // });
 
     d3.select('#slider').call(slider);
-    slider.on("slide", function(){console.log("we are friends now")})
+    slider.on("slide", function(e,v){updateOpacity(v)})
 
+}
+
+function updateOpacity(val)
+{
+    var nodes = $(".sunburst_node");
+    for (var i = 0; i < nodes.length; i++)
+    {
+        var node = nodes[i];
+
+    }
+    // var path = vis.data([json]).selectAll("path").data(nodes).enter();
+    // console.log(path.length);
 }
 
 function click(d) {
