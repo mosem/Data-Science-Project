@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="888d2c9d-448c-4fc1-a758-e404e7633141" name="Default" comment="&quot;c&quot;">
+    <list default="true" id="888d2c9d-448c-4fc1-a758-e404e7633141" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sequences.js" afterPath="$PROJECT_DIR$/sequences.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -418,7 +417,7 @@
       <workItem from="1487800404683" duration="11622000" />
       <workItem from="1487844769372" duration="1617000" />
       <workItem from="1488122292795" duration="35591000" />
-      <workItem from="1488218927106" duration="5796000" />
+      <workItem from="1488218927106" duration="5841000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;changed to weighted sum&quot;">
       <created>1488133086045</created>
@@ -462,11 +461,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488211826090</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="&quot;slider  sucess #5&quot;">
+      <created>1488279100732</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1488279100732</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215203000" />
+    <option name="totallyTimeSpent" value="215248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1406" extended-state="6" />
@@ -522,7 +528,8 @@
     <MESSAGE value="&quot;slider attempt 2&quot;" />
     <MESSAGE value="&quot;slider attempt 3&quot;" />
     <MESSAGE value="&quot;slider attempt 4 (success!)&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;slider attempt 4 (success!)&quot;" />
+    <MESSAGE value="&quot;slider  sucess #5&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;slider  sucess #5&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
