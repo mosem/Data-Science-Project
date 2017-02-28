@@ -25,7 +25,8 @@ body {
     width:300px;
     margin-top: 3px;
     margin-bottom: 3px;
-    float: left;
+    margin-right: 10px;
+    float: right;
     position:relative;
     padding: 5px;
 }
@@ -66,6 +67,20 @@ body::-webkit-scrollbar {
     float: right;
 }
 
+.movie-element{
+    position:relative;
+    width:100%;
+}
+
+.movie_title{
+    background-color: black;
+    color:white;
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    padding: 2px 7px 2px 7px;
+    font-size: 18px;
+}
 #title {
     float:top;
     height: 40px;
@@ -76,18 +91,17 @@ body::-webkit-scrollbar {
 
 #main {
     float: left;
-    width: 750px;
+    width: 50%;
+    margin: auto;
 }
 
 #sidebar {
     position:relative;
-    float:left;
-    width:340px;
+    float:right;
+    margin: 10px 20px 10px 20px;
+    width:350px;
     min-height:150px;
     max-height: 90%;
-    margin-right:20px;
-    margin-left:20px;
-    margin-bottom:40px;
     overflow:auto;
 }
 
