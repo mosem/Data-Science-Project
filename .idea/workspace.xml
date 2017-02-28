@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/carousel.css" description="    background: -moz-linear-gradient(top, rgba(255..." line="39" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="888d2c9d-448c-4fc1-a758-e404e7633141" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2ljk71_out.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/3n6gji_out.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/45cn7c_out.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/48vhc8_out.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/5hi9i5_out.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/5iao8t_out.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/5isens_out.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/5l14ri_out.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/5t4uu1_out.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/5ujuqd_out.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/carousel.css" afterPath="$PROJECT_DIR$/carousel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sequences.js" afterPath="$PROJECT_DIR$/sequences.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,20 +39,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="d3.slider.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d3.slider.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="812">
-              <caret line="85" column="1" lean-forward="false" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
+            <state relative-caret-position="433">
+              <caret line="40" column="53" lean-forward="true" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -45,79 +49,42 @@
       <file leaf-file-name="sequences.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sequences.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+            <state relative-caret-position="285">
+              <caret line="275" column="42" lean-forward="false" selection-start-line="275" selection-start-column="42" selection-end-line="275" selection-end-column="42" />
               <folding>
-                <marker date="1488271139946" expanded="true" signature="7190:7201" ph="..." />
+                <marker date="1488275431197" expanded="true" signature="7225:7236" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="d3.v3.min.js" pinned="false" current-in-tab="false">
-        <entry file="http://d3js.org/d3.v3.min.js">
-          <provider selected="true" editor-type-id="httpFileEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="d3.slider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d3.slider.js">
+      <file leaf-file-name="carousel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/carousel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6550">
-              <caret line="267" column="36" lean-forward="true" selection-start-line="267" selection-start-column="36" selection-end-line="267" selection-end-column="36" />
+            <state relative-caret-position="357">
+              <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#0#42#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flare.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flare.json">
+      <file leaf-file-name="sequences.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sequences.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8625">
-              <caret line="345" column="45" lean-forward="false" selection-start-line="345" selection-start-column="45" selection-end-line="349" selection-end-column="31" />
+            <state relative-caret-position="471">
+              <caret line="71" column="15" lean-forward="false" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text2.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/text2.json">
+      <file leaf-file-name="carousel.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/carousel.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="16438" lean-forward="false" selection-start-line="0" selection-start-column="16438" selection-end-line="0" selection-end-column="16438" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="text.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/text.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="114174" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="5rrasx_out.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/5rrasx_out.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2475">
-              <caret line="99" column="40" lean-forward="false" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4725">
-              <caret line="189" column="42" lean-forward="false" selection-start-line="178" selection-start-column="37" selection-end-line="199" selection-end-column="25" />
+            <state relative-caret-position="382">
+              <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -136,6 +103,14 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>container</find>
+      <find>explanation</find>
+      <find>entering</find>
+      <find>trail</find>
+      <find>sequence</find>
+      <find>html</find>
+      <find>opacity</find>
+      <find>d.n_</find>
       <find>pie</find>
       <find>d.count</find>
       <find>div</find>
@@ -151,21 +126,13 @@
       <find>drag</find>
       <find>displayValue</find>
       <find>on</find>
+      <find>on</find>
       <find>slider</find>
       <find>dragBehaviour</find>
       <find>dragger</find>
       <find>event</find>
       <find>e</find>
       <find>ticks</find>
-      <find>mouseo</find>
-      <find>updateOpacity</find>
-      <find>mouseover</find>
-      <find>opacity</find>
-      <find>updateO</find>
-      <find>(&quot;opacity&quot;, 0.6)</find>
-      <find>mouse</find>
-      <find>each</find>
-      <find>mouseleave</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,6 +143,7 @@
       <list>
         <option value="$PROJECT_DIR$/main.html" />
         <option value="$PROJECT_DIR$/flare.json" />
+        <option value="d3js.org/d3.v3.min.js" />
         <option value="$PROJECT_DIR$/index2.html" />
         <option value="chrome-extension://elicpjhcidhpjomhibiffojpinpmmpil/video/content.js" />
         <option value="$PROJECT_DIR$/example.json" />
@@ -184,11 +152,13 @@
         <option value="$PROJECT_DIR$/text2.json" />
         <option value="extensions::messaging" />
         <option value="chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/include.preload.js" />
-        <option value="$PROJECT_DIR$/sequences.css" />
         <option value="$PROJECT_DIR$/d3.slider.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/d3.slider.css" />
-        <option value="d3js.org/d3.v3.min.js" />
+        <option value="$PROJECT_DIR$/jcarousel.js" />
+        <option value="$PROJECT_DIR$/carousel.js" />
+        <option value="$PROJECT_DIR$/sequences.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/carousel.css" />
         <option value="$PROJECT_DIR$/sequences.js" />
       </list>
     </option>
@@ -199,11 +169,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="2582" />
-    <option name="height" value="1406" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -221,21 +194,21 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="moshe2" />
+              <option name="myItemId" value="Data-Science-Project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="moshe2" />
+              <option name="myItemId" value="Data-Science-Project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -256,7 +229,7 @@
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/moshe2/index.html">
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/Data-Science-Project/index.html">
       <method />
     </configuration>
     <configuration default="false" name="sequences.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="sequences.js" working-dir="$PROJECT_DIR$">
@@ -416,8 +389,9 @@
       <workItem from="1487675048752" duration="20391000" />
       <workItem from="1487800404683" duration="11622000" />
       <workItem from="1487844769372" duration="1617000" />
-      <workItem from="1488122292795" duration="35591000" />
-      <workItem from="1488218927106" duration="5866000" />
+      <workItem from="1488122292795" duration="27692000" />
+      <workItem from="1488212205290" duration="13532000" />
+      <workItem from="1488271129774" duration="4275000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;changed to weighted sum&quot;">
       <created>1488133086045</created>
@@ -447,55 +421,27 @@
       <option name="project" value="LOCAL" />
       <updated>1488203330569</updated>
     </task>
-    <task id="LOCAL-00005" summary="&quot;slider attempt 4 (success!)&quot;">
-      <created>1488210986422</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1488210986422</updated>
-    </task>
-    <task id="LOCAL-00006" summary="&quot;slider attempt 4 (success!)&quot;">
-      <created>1488211826090</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1488211826090</updated>
-    </task>
-    <task id="LOCAL-00007" summary="&quot;slider  sucess #5&quot;">
-      <created>1488279100732</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1488279100732</updated>
-    </task>
-    <task id="LOCAL-00008" summary="&quot;slider  sucess #5&quot;">
-      <created>1488279118104</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1488279118104</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215273000" />
+    <option name="totallyTimeSpent" value="219315000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="2582" height="1406" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21861386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.102604166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291874" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30542988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2238806" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22621565" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291874" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -534,57 +480,29 @@
     <MESSAGE value="&quot;attempt to add slider #1&quot;" />
     <MESSAGE value="&quot;slider attempt 2&quot;" />
     <MESSAGE value="&quot;slider attempt 3&quot;" />
-    <MESSAGE value="&quot;slider attempt 4 (success!)&quot;" />
-    <MESSAGE value="&quot;slider  sucess #5&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;slider  sucess #5&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;slider attempt 3&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/sequences.js</url>
-          <line>142</line>
+          <line>313</line>
           <properties />
-          <option name="timeStamp" value="125" />
+          <option name="timeStamp" value="104" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="126" />
+      <option name="time" value="105" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/5rrasx_out.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sequences.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sequences.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488271139946" expanded="true" signature="7190:7201" ph="..." />
+            <marker date="1488275431197" expanded="true" signature="7225:7236" ph="..." />
           </folding>
         </state>
       </provider>
@@ -594,7 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -602,9 +519,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -628,7 +543,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488271139946" expanded="true" signature="7190:7201" ph="..." />
+            <marker date="1488275431197" expanded="true" signature="7225:7236" ph="..." />
           </folding>
         </state>
       </provider>
@@ -638,7 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -646,9 +560,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -672,7 +584,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488271139946" expanded="true" signature="7190:7201" ph="..." />
+            <marker date="1488275431197" expanded="true" signature="7225:7236" ph="..." />
           </folding>
         </state>
       </provider>
@@ -696,7 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -704,9 +615,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +639,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1488271139946" expanded="true" signature="7190:7201" ph="..." />
+            <marker date="1488275431197" expanded="true" signature="7225:7236" ph="..." />
           </folding>
         </state>
       </provider>
@@ -758,7 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,9 +674,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8150">
           <caret line="326" column="7" lean-forward="false" selection-start-line="326" selection-start-column="7" selection-end-line="326" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -800,7 +705,7 @@
         <state relative-caret-position="925">
           <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
           <folding>
-            <marker date="1488271139946" expanded="true" signature="7190:7201" ph="..." />
+            <marker date="1488275431197" expanded="true" signature="7225:7236" ph="..." />
           </folding>
         </state>
       </provider>
@@ -825,10 +730,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="http://d3js.org/d3.v3.min.js">
+      <provider selected="true" editor-type-id="httpFileEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/visit-sequences.csv">
@@ -850,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2475">
           <caret line="99" column="40" lean-forward="false" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -858,81 +765,99 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4725">
           <caret line="189" column="42" lean-forward="false" selection-start-line="178" selection-start-column="37" selection-end-line="199" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flare.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8625">
-          <caret line="345" column="45" lean-forward="false" selection-start-line="345" selection-start-column="45" selection-end-line="349" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/text2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16438" lean-forward="false" selection-start-line="0" selection-start-column="16438" selection-end-line="0" selection-end-column="16438" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/text.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="114174" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sequences.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="37" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/d3.slider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6550">
-          <caret line="267" column="36" lean-forward="true" selection-start-line="267" selection-start-column="36" selection-end-line="267" selection-end-column="36" />
+          <caret line="267" column="36" lean-forward="false" selection-start-line="267" selection-start-column="36" selection-end-line="267" selection-end-column="36" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="http://d3js.org/d3.v3.min.js">
-      <provider selected="true" editor-type-id="httpFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/jcarousel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        <state relative-caret-position="6939">
+          <caret line="1468" column="21" lean-forward="false" selection-start-line="1468" selection-start-column="21" selection-end-line="1468" selection-end-column="21" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/d3.slider.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
+        <state relative-caret-position="1202">
           <caret line="85" column="1" lean-forward="false" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="0" column="114174" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="0" column="16438" lean-forward="false" selection-start-line="0" selection-start-column="16438" selection-end-line="0" selection-end-column="16438" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flare.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="345" column="45" lean-forward="false" selection-start-line="345" selection-start-column="45" selection-end-line="349" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sequences.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="71" column="15" lean-forward="false" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="40" column="53" lean-forward="true" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carousel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sequences.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="285">
+          <caret line="275" column="42" lean-forward="false" selection-start-line="275" selection-start-column="42" selection-end-line="275" selection-end-column="42" />
           <folding>
-            <marker date="1488271139946" expanded="true" signature="7190:7201" ph="..." />
+            <marker date="1488275431197" expanded="true" signature="7225:7236" ph="..." />
           </folding>
         </state>
       </provider>

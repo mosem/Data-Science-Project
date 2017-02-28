@@ -7,14 +7,79 @@
     <link rel="stylesheet" type="text/css" href="d3.slider.css" media="screen" />
     <script src="d3.slider.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
     <script src="linkify.min.js"></script>
     <script src="linkify-jquery.min.js"></script>
+    <script src="jcarousel.js"></script>
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
     <link rel="stylesheet" type="text/css" href="sequences.css"/>
+    <link rel="stylesheet" type="text/css" href="carousel.css"/>
 </head>
 <body>
-<h1 id="title"></h1>
+
+<div class="jcarousel-wrapper">
+    <div  class="jcarousel" data-jcarousel="true">
+        <ul style="left:0px; top 0px;">
+            <li id="la-la-land" class="movie-element">
+                <img src="./images/la-la-land.jpg" width="300" height="200" alt>
+                <h3 class="movie_title">La La Land</h3>
+            </li>
+            <li id="interstellar" class="movie-element">
+                <img src="./images/interstellar.jpg" width="300" height="200" alt>
+                <h3 class="movie_title">Interstellar</h3>
+            </li>
+            <li id="the-great-wall" class="movie-element">
+                <img src="./images/the-great-wall.jpg" width="300" height="200" alt>
+                <h3 class="movie_title">The Great Wall</h3>
+            </li>
+            <li id="the-martian" class="movie-element">
+                <img src="./images/the-martian.jpg" width="300" height="200" alt>
+                <h3 class="movie_title">The Martian</h3>
+            </li>
+            <li id="manchester-by-the-sea" class="movie-element">
+                <img src="./images/manchester-by-the-sea.jpg" width="300" height="200" alt>
+                <h3 class="movie_title">Manchester by the Sea</h3>
+            </li>
+            <li id="the-lego-batman-movie" class="movie-element">
+                <img src="./images/the-lego-batman-movie.jpg" width="300" height="200" alt>
+                <h3 class="movie_title">The Lego Batman Movie</h3>
+            </li>
+            <li id="deadpool" class="movie-element">
+                <img src="./images/deadpool.jpg" width="300" height="200" alt>
+                <h3 class="movie_title">Deadpool</h3>
+            </li>
+            <li id="jackie" class="movie-element">
+                <img src="./images/jackie.png" width="300" height="200" alt>
+                <h3 class="movie_title">Jackie</h3>
+            </li>
+            <li id="rogue-one" class="movie-element">
+                <img src="./images/rogue-one.jpg" width="300" height="200" alt>
+                <h3 class="movie_title">Rogue One</h3>
+            </li>
+            <li id="zootopia" class="movie-element">
+                <img src="./images/zootopia.jpg" width="300" height="200" alt>
+                <h3 class="movie_title">Zootopia</h3>
+            </li>
+        </ul>
+    </div>
+
+    <div id = "movie-button-container-top">
+        <a href="#" class="jcarousel-control-prev inactive" data-jcarouselcontrol="true">
+            <img border="0" alt="< Prev" src="./icons/prev-white.png">
+        </a>
+    </div>
+
+    <div id = "movie-button-container-bottom">
+        <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">
+            <img border="0" alt="< Next" src="./icons/next-white.png">
+        </a>
+    </div>
+
+</div>
+
+<!--<h1 id="title"></h1>-->
 
 <div id="main">
     <div id="chart">
@@ -24,13 +89,13 @@
         </div>
     </div>
     <div id="slider"></div>
-
 </div>
+
 <div id="sidebar">
     <div id="sequence"></div>
 </div>
 <script type="text/javascript" src="sequences.js"></script>
-
+<script type="text/javascript" src="carousel.js"></script>
 <script type="text/javascript">
     // Hack to make this example display correctly in an iframe on bl.ocks.org
     d3.select(self.frameElement).style("height", "700px");
