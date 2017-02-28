@@ -114,21 +114,23 @@ function createVisualization(json) {
         })
         .style("opacity", 1);
 
+    var min_score =d3.min(nodes, function(d) { return d.score; });
+    var max_score =d3.max(nodes, function(d) { return d.score; });
+    // Initialize slider
+    var slider = d3.slider().axis(d3.svg.axis().orient("top").ticks(10)).min(min_score).max(max_score).value(min_score);
+
+    d3.select('#slider').call(slider);
+    slider.on("slide", function(e,v){updateOpacity(v)})
+
 
     // Add the mouseleave handler to the bounding circle.
-    d3.select("#container").on("mouseleave", mouseleave);
+    d3.select("#container").on("mouseleave", mouseleave(slider.value()));
 
     // Get total size of the tree = value of root node from partition.
     totalSize = path.node().__data__.value;
 
 
-    var min_score =d3.min(nodes, function(d) { return d.score; });
-    var max_score =d3.max(nodes, function(d) { return d.score; });
-    // Initialize slider
-     var slider = d3.slider().axis(d3.svg.axis().orient("top").ticks(10)).min(min_score).max(max_score).value(min_score);
 
-    d3.select('#slider').call(slider);
-    slider.on("slide", function(e,v){updateOpacity(v)})
 
 }
 
@@ -136,10 +138,10 @@ function updateOpacity(val)
 {
     d3.selectAll(".sunburst_node").each( function(d, i){
         if(d.score <val){
-            d3.select(this).style("opacity",0)
+            d3.select(this).style("opacity",0).on("mouseover", null);
         }
         else {
-            d3.select(this).style("opacity",1)
+            d3.select(this).style("opacity",1).on("mouseover", mouseover);
 
         }
     })
@@ -175,8 +177,10 @@ function mouseover(d) {
         var sequenceArray = getAncestors(d);
         updateBreadcrumbs(sequenceArray);
         // Fade all the segments.
-        d3.selectAll(".sunburst_node")
-            .style("opacity", 0.6);
+        d3.selectAll(".sunburst_node").each(function(){
+            var current_opacity = d3.select(this).style("opacity");
+            d3.select(this).style("opacity", Math.min(0.6,current_opacity))
+        })
         // Then highlight only those that are an ancestor of the current segment.
         vis.selectAll(".sunburst_node")
             .filter(function(node) {
@@ -190,7 +194,7 @@ function mouseover(d) {
 }
 
 // Restore everything to full opacity when moving off the visualization.
-function mouseleave(d) {
+function mouseleave(d,val) {
     if (!clickMode) {
         // $(".comment_body").remove();
         // Hide the breadcrumb trail
@@ -207,6 +211,7 @@ function mouseleave(d) {
             .style("opacity", 1)
             .each("end", function() {
                 d3.select(this).on("mouseover", mouseover);
+                updateOpacity(val);
             });
 
         d3.select("#explanation")
