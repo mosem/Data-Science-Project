@@ -60,18 +60,19 @@ var arc = d3.svg.arc()
 // row, and can receive the csv as an array of arrays.
 d3.text("5rrasx_out.json", function(text) {
     var data = JSON.parse(text);
-    var json = buildHierarchy(data,'5rrasx');
+    var json = buildHierarchy(data);
 
     createVisualization(json);
 });
 
 $('.movie-element').click(function(event) {
+
     var name = $(this).attr("id");
     var filename = './data/' + name + '.json';
     console.log(filename);
     d3.text(filename, function(text) {
         var data = JSON.parse(text);
-        var json = buildHierarchy(data,name);
+        var json = buildHierarchy(data);
 
         createVisualization(json);
     });
@@ -79,6 +80,9 @@ $('.movie-element').click(function(event) {
 
 // Main function to draw and set up the visualization, once we have the data.
 function createVisualization(json) {
+
+    $("#container").empty();
+    $('#slider').empty();
 
     // Bounding circle underneath the sunburst, to make it easier to detect
     // when the mouse leaves the parent g.
@@ -311,9 +315,11 @@ function find_all_children(data,current_node) {
     return children
 }
 
-function buildHierarchy(data,root_name) {
+function buildHierarchy(data) {
     var root = {
-        "name": root_name,
+
+
+        "name": data[0].submission_id,
         "children": [],
         "n_leaves": 100,
         'title': data[0].submission_title,
