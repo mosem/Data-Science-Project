@@ -65,6 +65,18 @@ d3.text("5rrasx_out.json", function(text) {
     createVisualization(json);
 });
 
+$('.movie-element').click(function(event) {
+    var name = $(this).attr("id");
+    var filename = './data/' + name + '.json';
+    console.log(filename);
+    d3.text(filename, function(text) {
+        var data = JSON.parse(text);
+        var json = buildHierarchy(data,name);
+
+        createVisualization(json);
+    });
+})
+
 // Main function to draw and set up the visualization, once we have the data.
 function createVisualization(json) {
 
@@ -260,6 +272,7 @@ function updateBreadcrumbs(nodeArray) {
 function find_all_children(data,current_node) {
     var children = []
     for (var i = 0; i < data.length; i++) {
+        // console.log(data[i].parent_id);
         if (data[i].parent_id.split('_')[1] == current_node.name) {
             var child = data[i]
             child.sentiment_score >= 0 ? totalPos+=child.score : totalNeg+=child.score;

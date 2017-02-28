@@ -29,19 +29,46 @@ Position must be relative!
 .jcarousel li {
     float: left;
     display: block;
-    z-index:-1;
     position:relative;
+    opacity: 0.8;
+}
+
+#movie-button-container-top {
+    /*position:absolute;
+    top: 0px;
+    z-index:10;
+    width: 300px;
+    height: 50px;
+    !*background-color: black;*!
+    display:inline-block;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); !* FF3.6+ *!
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); !* Chrome,Safari4+ *!
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); !* Chrome10+,Safari5.1+ *!
+    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); !* Opera 11.10+ *!
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); !* IE10+ *!
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); !* W3C *!
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); !* IE6-9 *!*/
+}
+
+#movie-button-container-bottom {
+    /*position:absolute;
+    bottom: 0px;
+    z-index:10;
+    width: 300px;
+    height: 50px;
+    !*background-color: black;*!
+    display:inline-block;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); !* FF3.6+ *!
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); !* Chrome,Safari4+ *!
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); !* Chrome10+,Safari5.1+ *!
+    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); !* Opera 11.10+ *!
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); !* IE10+ *!
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); !* W3C *!
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); !* IE6-9 *!*/
 }
 
 .jcarousel-wrapper {
-    display:inline-block;
-    background: -moz-linear-gradient(top, rgba(255,255,255,0.65) 100%, rgba(255,255,255,0) 0%, rgba(255,255,255,0.65) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,rgba(255,255,255,0.65)), color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.65))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(255,255,255,0.65) 100%, rgba(255,255,255,0) 0%,rgba(255,255,255,0.65) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(255,255,255,0.65) 100%, rgba(255,255,255,0) 0%,rgba(255,255,255,0.65) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(255,255,255,0.65) 100%, rgba(255,255,255,0) 0%,rgba(255,255,255,0.65) 100%); /* IE10+ */
-    background: linear-gradient(to bottom, rgba(255,255,255,0.65) 100%, rgba(255,255,255,0) 0%,rgba(255,255,255,0.65) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
     margin-right: 40px;
     position: relative;
     overflow: hidden;
