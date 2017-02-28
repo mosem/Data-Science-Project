@@ -45,8 +45,8 @@
       <file leaf-file-name="sequences.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sequences.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="650">
+              <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding>
                 <marker date="1488271139946" expanded="true" signature="7190:7201" ph="..." />
               </folding>
@@ -417,7 +417,7 @@
       <workItem from="1487800404683" duration="11622000" />
       <workItem from="1487844769372" duration="1617000" />
       <workItem from="1488122292795" duration="35591000" />
-      <workItem from="1488218927106" duration="5841000" />
+      <workItem from="1488218927106" duration="5866000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;changed to weighted sum&quot;">
       <created>1488133086045</created>
@@ -468,11 +468,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488279100732</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="&quot;slider  sucess #5&quot;">
+      <created>1488279118104</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1488279118104</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215248000" />
+    <option name="totallyTimeSpent" value="215273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1406" extended-state="6" />
@@ -922,8 +929,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sequences.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        <state relative-caret-position="650">
+          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding>
             <marker date="1488271139946" expanded="true" signature="7190:7201" ph="..." />
           </folding>
