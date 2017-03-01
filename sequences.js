@@ -58,17 +58,16 @@ var arc = d3.svg.arc()
 
 // Use d3.text and d3.csv.parseRows so that we do not need to have a header
 // row, and can receive the csv as an array of arrays.
-d3.text("5rrasx_out.json", function(text) {
+d3.text("./data/la-la-land_tree.json", function(text) {
     var data = JSON.parse(text);
-    var json = buildHierarchy(data);
 
-    createVisualization(json);
+    createVisualization(data);
 });
 
 $('.movie-element').click(function(event) {
 
     var name = $(this).attr("id");
-    var filename = './data/' + name + '.json';
+    var filename = './data/' + name + '_tree.json';
     console.log(filename);
     d3.text(filename, function(text) {
         var data = JSON.parse(text);
@@ -287,7 +286,6 @@ function find_all_children(data,current_node) {
                     "displayText": child.author,
                     "name": child.id,
                     "children": [],
-                    "n_leaves": 0,
                     "body": child.body,
                     "author": child.author,
                     "parent_id": child.parent_id,
@@ -300,9 +298,7 @@ function find_all_children(data,current_node) {
         }
 
     }
-    if (children.length ==0) {
-        current_node.n_leaves = 1;
-    }
+
     for (var i=0 ;i<children.length; i++)
     {
         var child_node = children[i];
@@ -321,7 +317,6 @@ function buildHierarchy(data) {
 
         "name": data[0].submission_id,
         "children": [],
-        "n_leaves": 100,
         'title': data[0].submission_title,
         "body": data[0].submission_text,
         "score": data[0].submission_score,
